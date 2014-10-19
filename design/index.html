@@ -61,6 +61,12 @@
                         <a class="page-scroll" href="#portfolio">Some Llama</a>
                     </li>
                     <li>
+                      <a class="page-scroll" data-toggle="modal" data-target="#Cart" href="#">
+                          <span class="glyphicon glyphicon-shopping-cart"></span>
+                          Cart
+                      </a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
@@ -645,6 +651,46 @@
             </div>
         </div>
     </div>
+
+
+  <div class="modal fade" id="Cart" tabindex="-1" role="dialog" aria-labelledby="Cart" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Your Cart</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                              <img src="img/llama/01.jpg" alt="Gilbert">
+                              <div class="caption">
+                                  <h3 class="text-center">Gilbert</h3>
+                                  <p class="text-center"><a href="#" class="btn btn-default btn-lt" role="button">Delete</a></p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                              <img src="img/llama/05.jpg" alt="Pierre">
+                              <div class="caption">
+                                  <h3 class="text-center">Pierre</h3>
+                                  <p class="text-center"><a href="#" class="btn btn-default btn-lt" role="button">Delete</a></p>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Purchase</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>

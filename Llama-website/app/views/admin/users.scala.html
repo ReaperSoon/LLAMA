@@ -1,0 +1,31 @@
+@(users: List[models.User])
+
+@main("Users administration", "adminUsers"){
+<h1 class="page-header">Users</h1>
+<div class="row">
+    <button id="addUser" class="btn btn-success">Add user</button>
+</div>
+<div class="row">
+   <table class="table table-striped">
+       <thead>
+       <tr>
+        <th>Mail</th>
+        <th>Login</th>
+        <th>Actions</th>
+       </tr>
+       </thead>
+       <tbody>
+       @for(user <- users){
+        <tr data-id="@user.id">
+            <td>@user.mail</td>
+            <td>@user.login</td>
+            <td class="action">
+                <button class="user-edit btn btn-primary"><b>Edit</b>&nbsp;<i class="glyphicon glyphicon-pencil"></i></button>
+                <a href="/deleteUser/@user.id" class="user-delete btn btn-danger"><b>Delete</b>&nbsp;<i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+       }
+       </tbody>
+   </table>
+</div>
+}

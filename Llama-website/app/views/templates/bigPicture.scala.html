@@ -1,0 +1,19 @@
+@(product: models.Product)
+
+@import controllers.admin.Products
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">@product.name</h4>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            @if(Products.havePicture(product.id)){
+            <img src='@routes.Assets.at("images/llamas/llama-"+product.id+".jpg")' style="display:inline;">
+            } else {
+            <img src='@routes.Assets.at("images/llamas/no-llama.jpg")' style="display:inline;">
+            }
+        </div>
+    </div>
+</div>

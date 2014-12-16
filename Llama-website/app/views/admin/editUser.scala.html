@@ -1,0 +1,21 @@
+@(
+    userForm: Form[User.UserForm]
+)
+
+@content = {
+<form id="edit-user-form" action="/doEditUser" method="post" data-parsley-validate>
+    <input value='@userForm.get().mail' name="mail" required placeholder="Mail..." type="text" class="form-control" >
+    <input value='@userForm.get().login' name="login" required placeholder="Login..." type="text" class="form-control" >
+    <label style="margin-top: 10px;">Fill up this field to override the current password :</label>
+    <input name="password" placeholder="Password..." type="password" class="form-control" >
+
+    <input name="id" value='@userForm.get().id' type="hidden">
+</form>
+}
+
+@footer = {
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="submit" form="edit-user-form" class="btn btn-primary">Save changes</button>
+}
+
+@templates.modal("Edit user", content, footer)

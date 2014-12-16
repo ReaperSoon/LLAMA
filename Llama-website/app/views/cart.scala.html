@@ -1,0 +1,22 @@
+<div class="panel panel-default" style="margin-left:-13px;padding:0;border-radius:10px;">
+    <div class="panel-heading">
+        <h3 class="panel-title"><b>Shopping Cart</b></h3>
+    </div>
+    <div class="panel-body">
+        <div id="cart-rows">
+            @for(item <- controllers.ShoppingCart.items()){
+                @templates.cartRow(item)
+            }
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="total"><strong><h5 id="price">Total price: $0</h5></strong></div>
+            </div>
+            <div class="col-md-5">
+                <a href="/order" class="btn btn-primary" style="float: right;"><b>Order</b>&nbsp;<i class="glyphicon glyphicon-check"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>

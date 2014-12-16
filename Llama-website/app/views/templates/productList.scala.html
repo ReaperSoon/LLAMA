@@ -1,0 +1,15 @@
+@(products: List[models.Product])
+
+<div class="row">
+    @if(products.length==0){
+        <div class="col-md-12" style="text-align:center;">
+            <div class="alert alert-danger">No products to display</div>
+        </div>
+    } else {
+        @for(i <- 0 until products.length){
+        <div class="col-md-6">
+            @templates.product(products.get(i))
+        </div>
+        }
+    }
+</div>

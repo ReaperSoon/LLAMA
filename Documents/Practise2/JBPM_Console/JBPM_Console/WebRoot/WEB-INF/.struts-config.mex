@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/UserAction.do" location="650,850" dimension="358,84" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/list.jsp" location="1250,550" dimension="232,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/saveUI.jsp" location="1250,750" dimension="244,48" />
+  <StrutsActivity path="/index.jsp" location="350,1150" dimension="100,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/loginUI.jsp" location="50,1150" dimension="250,48" />
+  <StrutsActivity path="/WEB-INF/jsp/DeploymentAction/list.jsp" location="1250,1050" dimension="268,48" />
+  <StrutsActivity path="/WEB-INF/jsp/DeploymentAction/deployUI.jsp" location="1250,1250" dimension="292,48" />
+  <StrutsActivity path="/WEB-INF/jsp/DeploymentAction/showResources.jsp" location="1250,250" dimension="322,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ProcessDefinitionAction/list.jsp" location="650,50" dimension="310,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ProcessDefinitionAction/showProcessImage.jsp" location="1250,350" dimension="382,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/showProcessImageUI.jsp" location="50,450" dimension="346,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/runningList.jsp" location="50,1350" dimension="304,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/endedList.jsp" location="650,1250" dimension="292,48" />
+  <StrutsActivity path="/WEB-INF/jsp/TaskAction/groupTaskList.jsp" location="650,750" dimension="286,48" />
+  <StrutsActivity path="/WEB-INF/jsp/TaskAction/endedTaskList.jsp" location="650,1150" dimension="286,48" />
+  <StrutsActivity path="/WEB-INF/jsp/TaskAction/personalTaskList.jsp" location="50,750" dimension="304,48" />
+  <StrutsActivity path="/WEB-INF/jsp/TaskAction/completeTaskUI.jsp" location="50,850" dimension="292,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ProcessDefinitionAction/showProcessImageUI.jsp" location="50,250" dimension="394,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ProcessDefinitionAction/deployUI.jsp" location="650,150" dimension="334,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/list.jsp" location="50,350" dimension="262,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/deployUI.jsp" location="650,450" dimension="286,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/showProcessImage.jsp" location="50,550" dimension="334,48" />
+  <StrutsActivity path="/WEB-INF/jsp/TaskAction/showProcessImageUI.jsp" location="50,650" dimension="316,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/personalUserList.jsp" location="50,950" dimension="304,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/completeUserUI.jsp" location="50,1050" dimension="292,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/groupUserList.jsp" location="650,1050" dimension="286,48" />
+  <StrutsActivity path="/WEB-INF/jsp/ExecutionAction/runingList.jsp" location="50,1250" dimension="298,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/addUI.jsp" location="1250,450" dimension="238,48" />
+  <StrutsActivity path="/WEB-INF/jsp/UserAction/editUI.jsp" location="1250,650" dimension="244,48" />
+  <StrutsActivity path="/WEB-INF/jsp/DeploymentAction/showFiles.jsp" location="1250,1150" dimension="298,48" />
+  <StrutsTransition id="/UserAction.do,list,/WEB-INF/jsp/UserAction/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,850" />
+      <AbsolutePoint location="829,813" />
+      <AbsolutePoint location="1233,813" />
+      <AbsolutePoint location="1233,562" />
+      <AbsolutePoint location="1250,562" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/TaskAction.do,endedTaskList,/WEB-INF/jsp/TaskAction/endedTaskList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,583" />
+      <AbsolutePoint location="501,583" />
+      <AbsolutePoint location="501,1174" />
+      <AbsolutePoint location="650,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ExecutionAction.do,showProcessImageUI,/WEB-INF/jsp/ExecutionAction/showProcessImageUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="874,334" />
+      <AbsolutePoint location="874,413" />
+      <AbsolutePoint location="223,413" />
+      <AbsolutePoint location="223,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/TaskAction.do,completeTaskUI,/WEB-INF/jsp/TaskAction/completeTaskUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,613" />
+      <AbsolutePoint location="621,613" />
+      <AbsolutePoint location="621,874" />
+      <AbsolutePoint location="342,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/TaskAction.do,personalTaskList,/WEB-INF/jsp/TaskAction/personalTaskList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,634" />
+      <AbsolutePoint location="829,713" />
+      <AbsolutePoint location="202,713" />
+      <AbsolutePoint location="202,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/TaskAction.do,groupTaskList,/WEB-INF/jsp/TaskAction/groupTaskList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="859,634" />
+      <AbsolutePoint location="859,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ExecutionAction.do,runningList,/WEB-INF/jsp/ExecutionAction/runningList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="844,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DeploymentAction.do,deployUI,/WEB-INF/jsp/DeploymentAction/deployUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1563,934" />
+      <AbsolutePoint location="1563,1274" />
+      <AbsolutePoint location="1542,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ProcessDefinitionAction.do,list,/WEB-INF/jsp/ProcessDefinitionAction/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="486,83" />
+      <AbsolutePoint location="650,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ExecutionAction.do,toRunningList,/ExecutionAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="844,250" />
+      <AbsolutePoint location="844,213" />
+      <AbsolutePoint location="1113,213" />
+      <AbsolutePoint location="1113,292" />
+      <AbsolutePoint location="1038,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ProcessDefinitionAction.do,toList,/ProcessDefinitionAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="268,50" />
+      <AbsolutePoint location="268,-25" />
+      <AbsolutePoint location="561,-25" />
+      <AbsolutePoint location="561,53" />
+      <AbsolutePoint location="486,53" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UserAction.do,toList,/UserAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="981,850" />
+      <AbsolutePoint location="981,665" />
+      <AbsolutePoint location="1143,665" />
+      <AbsolutePoint location="1143,904" />
+      <AbsolutePoint location="1008,904" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UserAction.do,toIndex,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,913" />
+      <AbsolutePoint location="411,913" />
+      <AbsolutePoint location="411,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UserAction.do,saveUI,/WEB-INF/jsp/UserAction/saveUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,934" />
+      <AbsolutePoint location="829,1013" />
+      <AbsolutePoint location="1113,1013" />
+      <AbsolutePoint location="1113,765" />
+      <AbsolutePoint location="1250,765" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DeploymentAction.do,showResources,/WEB-INF/jsp/DeploymentAction/showResources.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1447,892" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UserAction.do,loginUI,/WEB-INF/jsp/UserAction/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="981,934" />
+      <AbsolutePoint location="981,1113" />
+      <AbsolutePoint location="175,1113" />
+      <AbsolutePoint location="175,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ProcessDefinitionAction.do,showProcessImage,/WEB-INF/jsp/ProcessDefinitionAction/showProcessImage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="268,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DeploymentAction.do,toList,/DeploymentAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1447,850" />
+      <AbsolutePoint location="1447,813" />
+      <AbsolutePoint location="1719,813" />
+      <AbsolutePoint location="1719,892" />
+      <AbsolutePoint location="1644,892" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/TaskAction.do,toPersonalTaskList,/TaskAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,550" />
+      <AbsolutePoint location="829,513" />
+      <AbsolutePoint location="1203,513" />
+      <AbsolutePoint location="1203,562" />
+      <AbsolutePoint location="1008,562" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DeploymentAction.do,list,/WEB-INF/jsp/DeploymentAction/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1447,934" />
+      <AbsolutePoint location="1447,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ExecutionAction.do,endedList,/WEB-INF/jsp/ExecutionAction/endedList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1023,334" />
+      <AbsolutePoint location="1023,1274" />
+      <AbsolutePoint location="942,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UserAction.do,toLoginUI,/UserAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="951,850" />
+      <AbsolutePoint location="951,765" />
+      <AbsolutePoint location="1053,765" />
+      <AbsolutePoint location="1053,862" />
+      <AbsolutePoint location="1008,862" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

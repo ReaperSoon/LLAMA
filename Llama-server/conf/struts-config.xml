@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="UserActionForm" type="cn.itcast.jbpm4console.view.struts.formbean.UserActionForm"></form-bean>
+		<form-bean name="DeploymentActionForm" type="cn.itcast.jbpm4console.view.struts.formbean.DeploymentActionForm"></form-bean>
+		<form-bean name="ProcessDefinitionActionForm" type="cn.itcast.jbpm4console.view.struts.formbean.ProcessDefinitionActionForm"></form-bean>
+		<form-bean name="ExecutionActionForm" type="cn.itcast.jbpm4console.view.struts.formbean.ExecutionActionForm"></form-bean>
+		<form-bean name="TaskActionForm" type="cn.itcast.jbpm4console.view.struts.formbean.TaskActionForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<!-- 用户有关 -->
+		<action path="/UserAction" type="cn.itcast.jbpm4console.view.struts.action.UserAction" parameter="method" name="UserActionForm"
+			scope="request">
+			<forward name="list" path="/WEB-INF/jsp/UserAction/list.jsp"></forward>
+			<forward name="saveUI" path="/WEB-INF/jsp/UserAction/saveUI.jsp"></forward>
+			<forward name="toList" path="/UserAction.do?method=list" redirect="true"></forward>
+
+			<forward name="loginUI" path="/WEB-INF/jsp/UserAction/loginUI.jsp"></forward>
+			<forward name="toIndex" path="/index.jsp" redirect="true"></forward>
+			<forward name="toLoginUI" path="/UserAction.do?method=loginUI" redirect="true"></forward>
+		</action>
+
+
+		<!-- Deployment管理 -->
+		<action path="/DeploymentAction" type="cn.itcast.jbpm4console.view.struts.action.DeploymentAction" parameter="method"
+			name="DeploymentActionForm" scope="request">
+			<forward name="list" path="/WEB-INF/jsp/DeploymentAction/list.jsp"></forward>
+			<forward name="deployUI" path="/WEB-INF/jsp/DeploymentAction/deployUI.jsp"></forward>
+			<forward name="showResources" path="/WEB-INF/jsp/DeploymentAction/showResources.jsp"></forward>
+			<forward name="toList" path="/ProcessDefinitionAction.do?method=list" redirect="true"></forward>
+		</action>
+
+
+		<!-- 流程定义管理 -->
+		<action path="/ProcessDefinitionAction" type="cn.itcast.jbpm4console.view.struts.action.ProcessDefinitionAction" parameter="method"
+			name="ProcessDefinitionActionForm" scope="request">
+			<forward name="list" path="/WEB-INF/jsp/ProcessDefinitionAction/list.jsp"></forward>
+			<forward name="showProcessImage" path="/WEB-INF/jsp/ProcessDefinitionAction/showProcessImage.jsp"></forward>
+			<forward name="toList" path="/ProcessDefinitionAction.do?method=list" redirect="true"></forward>
+		</action>
+
+
+		<!-- 流程实例监控 -->
+		<action path="/ExecutionAction" type="cn.itcast.jbpm4console.view.struts.action.ExecutionAction" parameter="method" name="ExecutionActionForm"
+			scope="request">
+			<forward name="listRunning" path="/WEB-INF/jsp/ExecutionAction/listRunning.jsp"></forward>
+			<forward name="listEnded" path="/WEB-INF/jsp/ExecutionAction/listEnded.jsp"></forward>
+			<forward name="showProcessImageUI" path="/WEB-INF/jsp/ExecutionAction/showProcessImageUI.jsp"></forward>
+			<forward name="toListRunning" path="/ExecutionAction.do?method=listRunning" redirect="true"></forward>
+		</action>
+
+
+		<!-- 任务办理 -->
+		<action path="/TaskAction" type="cn.itcast.jbpm4console.view.struts.action.TaskAction" parameter="method" name="TaskActionForm"
+			scope="request">
+			<forward name="personalTaskList" path="/WEB-INF/jsp/TaskAction/personalTaskList.jsp"></forward>
+			<forward name="groupTaskList" path="/WEB-INF/jsp/TaskAction/groupTaskList.jsp"></forward>
+			<forward name="endedTaskList" path="/WEB-INF/jsp/TaskAction/endedTaskList.jsp"></forward>
+			<forward name="completeTaskUI" path="/WEB-INF/jsp/TaskAction/completeTaskUI.jsp"></forward>
+			<forward name="toPersonalTaskList" path="/TaskAction.do?method=personalTaskList" redirect="true"></forward>
+		</action>
+
+
+
+	</action-mappings>
+	<message-resources parameter="MessageResources" />
+</struts-config>
+

@@ -1,0 +1,39 @@
+To make the server work you need:
+1) Download and install :
+	- Eclipse Luna for Java EE
+	- Java 8
+	- Tomcat 8
+2) On your eclipse you need to install the JBPM 4 plugin (see Practice2/doc/jbpm_install.doc)
+3) Import the project : "File => Import => Maven => Existing maven project" and browse to the "Llama-server" folder
+4) Once the project imported, right click on the project => Maven => Update Project... (wait a moment)
+5) Click on "Windows => Show view => other => Servers => server", OK
+6) On server view => right click => new => server. Choose Tomcat 8 and at the Server runtime environment click to "Add" and "Browse" to you fresh downloaded Tomcat8 folder. Click "Finish"
+7) Right click on your Tomcat8 Server => Add and Remove => Choose llama-server => Add> => Finish => Start the server by pressing the small "play" icon on buttom right
+
+If all is ok you will see at end of the console something like :
+[INFO] ProcessService.addUserToTask (ServicesLoader.java:86)
+[INFO] ProcessService.deployProcess (ServicesLoader.java:86)
+[INFO] ProcessService.deleteProcess (ServicesLoader.java:86)
+[INFO] ProcessService.startProcess (ServicesLoader.java:86)
+[INFO] ProcessService.completeTask (ServicesLoader.java:86)
+[INFO] ProcessService.getDeployedProcesses (ServicesLoader.java:86)
+[INFO] ProcessService.getPersonnalTasks (ServicesLoader.java:86)
+[INFO] Loaded 7 service in 3551ms (ServicesLoader.java:91)
+
+Now you can play with all the services!!
+
+USAGE:
+
+The services wait a POST request with JSON array with arguments inside and return JS ruON object.
+You can use POSTMAN plugin for google chrome or curl command, or other.
+
+example of use:
+Request type : POST
+Request URL : localhost:8080/llama-server/ProcessService/addUserToTask
+Request data: [ "help" ]
+
+You can use this command for all services; just try!
+
+*********************
+* Have fun ! Steve. *
+*********************

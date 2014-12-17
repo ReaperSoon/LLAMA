@@ -1,0 +1,11 @@
+cn.itcast.designer.core
+cn.itcast.designer.core.action
+cn.itcast.designer.core.controller
+cn.itcast.designer.core.controller.impl
+cn.itcast.designer.core.dialog
+cn.itcast.designer.core.dialog.impl
+cn.itcast.designer.core.model.base
+cn.itcast.designer.core.model.element
+cn.itcast.designer.core.model.element.node
+cn.itcast.designer.core.util
+cn.itcast.designer.view

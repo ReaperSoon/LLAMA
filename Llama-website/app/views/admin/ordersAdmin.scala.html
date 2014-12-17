@@ -1,0 +1,7 @@
+@(bills: List[models.Bill])
+
+@main("Orders Administration", "adminOrders"){
+<h1 class="page-header">Orders Administration</h1>
+<hr />
+@templates.orderList(bills, 1)
+}

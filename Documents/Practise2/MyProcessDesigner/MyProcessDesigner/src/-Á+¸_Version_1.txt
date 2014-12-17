@@ -1,0 +1,35 @@
+
+1，按钮使用JToggleButton。
+2，给按钮添加事件时，使用MousePressed事件，这样感觉用起来比较灵敏。
+    说明：在按钮上最好使用MousePressed事件，以前使用MouseClicked事件，用起来好像不灵敏一样。
+         因为点击时鼠标移动速度快，导致在按钮上只触发MousePressed事件，在外面触发MouseReleased事件，这样当前也不会触发MouseClicked事件。
+
+
+
+一、核心类 ProcessPanel，用于绘图：
+    1，MousePressed 时：
+        1，记下当前的坐标为(startX, startY)
+        2，如果是处于[选择功能]状态：
+            1，当前有选中的元素：
+                1，记下当前坐标，以便后面使用移动元素的功能。
+                2，如果当前坐标不在某一个元素中，就取消上次的选择（如果有），并记下当前坐标，以便后面使用范围选择功能。
+            2，当前没有选中元素：
+                1，如果当前坐标在某一个元素中，就选中他。
+        3，如果当前处于[画流程元素]状态（非选择功能）：
+            1，如果当前有选择的元素，就取消选择。
+        4，如果当前处于[画连线]功能状态：
+            1，如果当前坐标在某一个元素中：
+                1，记下这个元素为 currentTransitionFrom。
+                2，让这个元素显示中心点（蓝色）
+
+    2，MouseDragged 时：
+    3，MouseReleased 时：
+        如果是正在使用画流程节点有关的功能，
+    4，MouseClicked 时：
+        1，双击鼠标左键：
+
+二、核心类 ProcessDesignerState，记录流程设计器当前的状态信息：
+    1，currentFunctionType : FunctionType       当前正在使用功能的类型
+    2，startX : int, startY : int               鼠标按下时的坐标（开始坐标）
+
+    selectedElement  当前选择的元素

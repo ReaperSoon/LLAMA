@@ -1,0 +1,23 @@
+@(currentPage: String)
+
+@import utils.Session
+
+<ul class="nav nav-sidebar">
+	<li><a id="salutlol"  class="btn btn-success">Search Shipment</a></li>
+    <li class='@if(currentPage=="products"){active}'><a href="/products">Products</a></li>
+    @if(Session.isLogged){
+        <li class='@if(currentPage=="history"){active}'><a href="/orders">Orders History</a></li>
+    }
+</ul>
+
+@if(Session.isAdmin()){
+    <hr />
+    <ul class="nav nav-sidebar">
+        <li class='@if(currentPage=="adminUsers"){active}'><a href="/userAdministration">Users administration</a></li>
+        <li class='@if(currentPage=="adminProducts"){active}'><a href="/productAdministration">Products administration</a></li>
+        <li class='@if(currentPage=="adminOrders"){active}'><a href="/ordersAdministration">Orders administration</a></li>
+    </ul>
+}
+<hr />
+
+@cart()

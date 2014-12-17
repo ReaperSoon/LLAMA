@@ -1,0 +1,14 @@
+users:
+    - !!models.User
+        isAdmin: 1
+        mail: jerome.bonini@epitech.eu
+        login: SisiGros
+        password: d033e22ae348aeb5660fc2140aec35850c4da997
+
+products:
+    - !!models.Product
+        name: 'Le meilleur produit de l''annee'
+        description: 'La megadescription qui est juste un peux plus longue histoire de'
+        price: 42.42
+        quantity: 100
+

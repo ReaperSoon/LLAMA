@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="test" name="test" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="99,229,48,48" name="start1">
+      <transition g="-64,-20" name="to giveName" to="giveName"/>
+   </start>
+   <end g="596,231,48,48" name="end"/>
+   <java class="fr.llama.server.process.Test" g="414,230,92,52" method="sayHello" name="sayHello" var="result">
+      <arg><string value="name"/></arg>
+      <transition g="-39,-20" name="to end" to="end"/>
+   </java>
+   <task assignee="steve" g="228,229,92,52" name="giveName">
+      <transition g="-64,-20" name="to sayHello" to="sayHello"/>
+   </task>
+</process>

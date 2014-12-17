@@ -1,0 +1,14 @@
+To make the website to work you need:
+1) Download and unzip Play-2.2.4 framework (~550Mo)
+2) Add the unzipped folder root to your environment "Path"
+3) Add java bin to your environment "Path" (e.g: C:\Program Files\Java\jdk1.8.0_25\bin)
+4) Check if your path is ready : open command shell and type ("$>play -version" and "$>javac -version")
+5) Start MySQL (install mysql or wamp if needed) and execute llama.sql script found on "llama-website/script"
+The script will create all tables for the website and jpbm4.
+
+Now you are ready to start the website : open a command shell on the llama-website folder and type "$>play run".
+When the server is started successfully go to url : localhost:9000
+
+*********************
+* Have fun ! Steve. *
+*********************

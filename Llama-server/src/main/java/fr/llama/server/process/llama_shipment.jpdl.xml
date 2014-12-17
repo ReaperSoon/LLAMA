@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="llama_shipment" xmlns="http://jbpm.org/4.4/jpdl" key="llama_shipment">
+   <start g="156,5,61,45" name="start1">
+      <transition g="-110,-22" name="to generate order" to="generate order"/>
+   </start>
+   <end g="264,532,60,17" name="end1"/>
+   <task assignee="llama selector 1" g="142,185,307,38" name="select llama from farm">
+      <transition g="-206,-22" name="to ship llama to distribution center" to="ship llama to distribution center"/>
+   </task>
+   <task assignee="driver 2" g="598,325,270,39" name="ship llamas to customer">
+      <transition g="-79,-22" name="to exclusive1" to="what is the result?"/>
+   </task>
+   <task assignee="driver 1" g="130,317,381,52" name="ship llama to distribution center">
+      <transition g="-235,-22" name="to select llama from distributiom center" to="select llama from distributiom center"/>
+   </task>
+   <decision expr="#{result>0?'to end1':'to ship llama to distribution center'}" g="462,487,48,48" name="what is the result?">
+      <transition g="-50,-22" name="to end1" to="end1"/>
+      <transition g="-206,-22" name="to ship llama to distribution center" to="ship llama to distribution center"/>
+   </decision>
+   <task assignee="order manager" g="89,93,198,38" name="generate order">
+      <transition g="-152,-22" name="to select llama from farm" to="select llama from farm"/>
+   </task>
+   <task assignee="llama selector 2" g="501,181,363,48" name="select llama from distributiom center">
+      <transition g="-160,-22" name="to ship llamas to customer" to="ship llamas to customer"/>
+   </task>
+</process>

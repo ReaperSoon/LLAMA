@@ -1,0 +1,12 @@
+{
+	"MYSQL" : {
+		"HOST" : "127.0.0.1",
+		"PORT" : "3306",
+		"DATABASE" : "llama",
+		"USER" : "root",
+		"PASSWORD" : ""
+	},
+	"PROJECT" : {
+		"SERVICES.PACKAGE" : "fr.llama.server.services"
+	}
+}

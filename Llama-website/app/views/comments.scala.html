@@ -1,0 +1,38 @@
+@(product: models.Product)
+
+@import utils.Session
+
+
+@content = {
+    @if(!Session.isLogged()){
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <div class="alert alert-danger">You must be logged in to comment on this product</div>
+            </div>
+        </div>
+    }
+    <div class="row @if(!Session.isLogged()){disabled-effect}">
+        <div class="col-md-12">
+            <form class="form-horizontal" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="comment" class="col-md-3 control-label">Add comment</label>
+                    <div class="col-md-7">
+                        <textarea required name="comment" id="comment" @if(!Session.isLogged()){disabled} class="form-control" placeholder="Comment"></textarea>
+                    </div>
+                    <div class="col-md-2">
+                        <button id="addComment" type="submit" class="btn btn-success" style="margin-top:10px;float:right;" @if(!Session.isLogged()){disabled}>Publish</button>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+@footer = {
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+}
+
+@templates.modal("Comments for "+product.name, content, footer)

@@ -1,0 +1,22 @@
+-classpath
+'/home/aguizar/jbpm/jbpm4/trunk/target/checkout/modules/api/target/classes:/home/aguizar/.m2/repository/jboss/jboss-j2ee/4.2.2.GA/jboss-j2ee-4.2.2.GA.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/aguizar/jbpm/jbpm4/trunk/target/checkout/modules/api/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2010 <a href="http://jboss.org">JBoss Community</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/home/aguizar/jbpm/jbpm4/trunk/target/checkout/modules/api/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'jBPM 4 - API 4.4 API'
+-use
+-version
+-windowtitle
+'jBPM 4 - API 4.4 API'

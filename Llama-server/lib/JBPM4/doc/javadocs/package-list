@@ -1,0 +1,10 @@
+org.jbpm.api
+org.jbpm.api.activity
+org.jbpm.api.cmd
+org.jbpm.api.history
+org.jbpm.api.identity
+org.jbpm.api.job
+org.jbpm.api.jpdl
+org.jbpm.api.listener
+org.jbpm.api.model
+org.jbpm.api.task

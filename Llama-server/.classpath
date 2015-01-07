@@ -24,13 +24,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jBPM Library">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JBPM4 Library">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/juel_jars/juel-api.jar"/>
-	<classpathentry kind="lib" path="lib/juel_jars/juel-engine.jar"/>
-	<classpathentry kind="lib" path="lib/juel_jars/juel-impl.jar"/>
+	<classpathentry kind="lib" path="lib/JBPM4/jbpm.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
